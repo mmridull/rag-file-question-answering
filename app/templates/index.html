@@ -1,0 +1,23 @@
+
+<!doctype html>
+<html>
+<head><title>RAG App</title></head>
+<body>
+  <h2>Upload a file</h2>
+  <form action="/" method="post" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+  </form>
+
+  <h2>Ask a question</h2>
+  <form action="/" method="post">
+    <input type="text" name="question" style="width: 300px;">
+    <input type="submit" value="Ask">
+  </form>
+
+  {% if answer %}
+    <h3>Answer:</h3>
+    <p>{{ answer }}</p>
+  {% endif %}
+</body>
+</html>
